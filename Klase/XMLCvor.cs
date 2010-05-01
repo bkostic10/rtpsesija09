@@ -33,10 +33,7 @@ namespace Klase
         public override string ToString()
         {
             StringBuilder rezultat = new StringBuilder();
-            kreirajOtvoreniTag(rezultat);
-            kreirajDecu(rezultat);
-            kreirajVrednost(rezultat);
-            kreirajZatvoreniTag(rezultat);
+            spajanjeMetoda(rezultat);
             return rezultat.ToString();
         }
 
@@ -52,8 +49,7 @@ namespace Klase
             while (it.MoveNext())
             {
                 XMLCvor cvor = (XMLCvor)it.Current;
-                //cvor.spajanjeMetoda(rez);
-                rez.Append(cvor.ToString());
+                cvor.spajanjeMetoda(rez);
             }
         }
         public void kreirajVrednost(StringBuilder rez)
